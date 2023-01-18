@@ -13,7 +13,7 @@ pipeline {
           stage('build') {
             steps {
                 
-                sh 'zip middleware_script4.zp * -x Jenkinsfile'
+                sh 'zip middleware_script5.zp * -x Jenkinsfile'
                 
             }
           }
@@ -29,7 +29,7 @@ pipeline {
           stage('deploy') {
             steps {
                
-                sh 'cp -r middleware_script.zp /tmp/myarchieves'
+                sh 'cp -r middleware_script5.zp /tmp/myarchieves'
                 
             }
         }
