@@ -12,6 +12,7 @@ pipeline {
         }
           stage('build') {
             steps {
+                
                 sh 'zip middleware_script.zp * -x Jenkinsfile'
                 
             }
@@ -27,8 +28,9 @@ pipeline {
           } 
           stage('deploy') {
             steps {
-                echo 'deploy'
-                sleep 4
+                sh 'mkdir /tmp/myarchieves'
+                sh 'cp -r middleware_script.zp /tmp/myarchieves'
+                
             }
         }
     }
