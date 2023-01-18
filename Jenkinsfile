@@ -12,7 +12,7 @@ pipeline {
         }
           stage('build') {
             steps {
-                sh 'zip middleware_script.zp *'
+                sh 'zip middleware_script.zp * -x Jenkinsfile'
                 
             }
           }
