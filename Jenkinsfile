@@ -16,7 +16,7 @@ pipeline {
                   sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible',
                     transfers: [ sshTransfer(flatten: false,
                                  remoteDirectory: '',
-                                             sourceFiles: 'zip middleware_script.zp'
+                                             sourceFiles: './*'
                     )])
                   ])
                    
