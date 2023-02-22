@@ -7,7 +7,7 @@ pipeline {
                      
                  
                    
-                    sh "zip middleware_script_AWS.zp *"
+                    sh "zip middleware_script.zp *"
                   
                    
                          
@@ -16,7 +16,7 @@ pipeline {
                   sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible',
                     transfers: [ sshTransfer(flatten: false,
                                  remoteDirectory: '',
-                                             sourceFiles: 'zip middleware_script_AWS.zp'
+                                             sourceFiles: 'zip middleware_script.zp'
                     )])
                   ])
                    
