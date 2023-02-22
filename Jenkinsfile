@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script{
                      
-                    cleanWs()
+                 
                    
                     sh "zip middleware_script_AWS.zp *"
                   
