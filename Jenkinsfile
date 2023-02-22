@@ -7,7 +7,7 @@ pipeline {
                      
                  
                    
-                    sh "zip middleware_script.zp *"
+                  
                   
                    
                          
