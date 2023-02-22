@@ -6,19 +6,10 @@ pipeline {
                 script{
                      
                     cleanWs()
-                    sh "echo 'hello' >> file1.txt"
-                    sh "echo 'hello' >> file2.txt"
+                   
                     sh "zip middleware_script_AWS.zp *"
-                     
-                    echo 'Local files.....'       
-                    sh 'ls -l'
- 
-                    command='''
-                        unzip -o -d ./ oneFile.zip
-                        ls -l
-                        date
-                        cat /etc/os-release
-                    '''
+                  
+                   
                          
  
                   // Copy file to remote server 
